@@ -36,14 +36,14 @@ public class Hooks {
 
         if (scenario.isFailed()){
 
-            byte [] screenshot = ((TakesScreenshot) com.cydeo.utilities.Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            byte [] screenshot = ((TakesScreenshot) cydeo.utilities.Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
 
         }
 
 
         //BrowserUtils.sleep(5);
-        com.cydeo.utilities.Driver.closeDriver();
+        cydeo.utilities.Driver.closeDriver();
 
         //System.out.println("====Closing browser using cucumber @After");
         //System.out.println("====Scenario ended/ Take screenshot if failed!");

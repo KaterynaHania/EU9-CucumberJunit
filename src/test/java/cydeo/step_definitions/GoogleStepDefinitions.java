@@ -1,6 +1,6 @@
 package cydeo.step_definitions;
 
-import com.cydeo.utilities.Driver;
+import cydeo.utilities.Driver;
 import cydeo.pages.*;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

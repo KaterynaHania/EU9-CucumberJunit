@@ -10,7 +10,7 @@ In this class we will store WebElements common to all pages
 public class BasePage {
 
     public BasePage(){
-        PageFactory.initElements(com.cydeo.utilities.Driver.getDriver(), this);
+        PageFactory.initElements(cydeo.utilities.Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//button[.='View all orders']")

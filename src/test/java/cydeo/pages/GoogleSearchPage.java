@@ -8,7 +8,7 @@ public class GoogleSearchPage {
     //create constructor
     // initialize the driver instance and this class' instance using PageFactory.initElements
     public GoogleSearchPage(){
-        PageFactory.initElements(com.cydeo.utilities.Driver.getDriver(), this);
+        PageFactory.initElements(cydeo.utilities.Driver.getDriver(), this);
     }
 
     //We can start locating web elements using @FindBy annotation
@@ -20,7 +20,7 @@ public class GoogleSearchPage {
 //    }
 
     public String getCapital(){
-        return com.cydeo.utilities.Driver.getDriver().findElement(By.xpath("//a[@class='FLP8od']")).getText();
+        return cydeo.utilities.Driver.getDriver().findElement(By.xpath("//a[@class='FLP8od']")).getText();
     }
 
 }

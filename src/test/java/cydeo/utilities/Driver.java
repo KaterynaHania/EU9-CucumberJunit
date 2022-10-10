@@ -1,4 +1,4 @@
-package com.cydeo.utilities;
+package cydeo.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -76,7 +76,7 @@ public class Driver {
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     }
-                 break;
+                    break;
                 case "saucelab-chrome":
                     try{
                         URL url = new URL("https://oauth-sdetoscar-844c8:66e7117f-390e-4556-8105-07af96a01f7a@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
@@ -89,7 +89,7 @@ public class Driver {
                         e.printStackTrace();
                     }
 
-            break;
+                    break;
                 case "saucelab-edge":
                     EdgeOptions browserOptions = new EdgeOptions();
                     browserOptions.setCapability("platformName", "Windows 11");
