@@ -6,14 +6,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = "html:target",
+        plugin = "html:target/cucumber-report.html",
 
 
         features = "src/test/resources/features",
         glue = "cydeo/step_definitions",
         dryRun = false,
-        tags = "@librarian",
-        publish = false
+        tags = "@wip"
+       , publish = false
 
 )
 public class CukesRunner {

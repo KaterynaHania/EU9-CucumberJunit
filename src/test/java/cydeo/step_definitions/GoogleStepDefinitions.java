@@ -5,13 +5,16 @@ import cydeo.pages.*;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
 import java.security.Key;
 
 public class GoogleStepDefinitions {
 
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
+
 
     @When("user types apple and clicks enter")
     public void user_types_and_clicks_enter2() {
@@ -30,7 +33,7 @@ public class GoogleStepDefinitions {
     @Then("user sees {string} in the google title")
     public void user_sees_in_the_google_title(String string) {
 
-        String expectedTitle = string+" - Google Search";
+        String expectedTitle = string+" - Google-søgning";
         String actualTitle = Driver.getDriver().getTitle();
 
         //Junit assertion accepts first arg as expected, second arg as actual
@@ -41,7 +44,7 @@ public class GoogleStepDefinitions {
     @Then("user sees apple in the google title")
     public void user_sees_apple_in_the_google_title() {
 
-        String expectedTitle = "apple - Google Search";
+        String expectedTitle = "apple - Google-søgning";
         String actualTitle = Driver.getDriver().getTitle();
 
         //Junit assertion accepts first arg as expected, second arg as actual
@@ -55,6 +58,8 @@ public class GoogleStepDefinitions {
     public void user_is_on_google_search_page() {
 
         Driver.getDriver().get("https://www.google.com");
+        WebElement acceptAllCookiesBtn = Driver.getDriver().findElement(By.xpath("//div[.='Acceptér alle']"));
+        acceptAllCookiesBtn.click();
 
     }
 
