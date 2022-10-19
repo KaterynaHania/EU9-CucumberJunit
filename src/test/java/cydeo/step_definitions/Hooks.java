@@ -30,7 +30,7 @@ public class Hooks {
         System.out.println("====this will only apply to scenarios with @db tag");
     }
 
-
+/*
     @After
     public void teardownScenario(Scenario scenario){
 
@@ -56,7 +56,7 @@ public class Hooks {
     public void setupStep(){
         System.out.println("--------> applying setup using @BeforeStep");
     }
-
+*/
     //@AfterStep
     public void afterStep(){
         System.out.println("--------> applying tearDown using @AfterStep");
